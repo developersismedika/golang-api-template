@@ -1,0 +1,42 @@
+# general configuration: dev, stag, prod
+general:
+  buildMode: dev
+  port: 8001
+  address: 0.0.0.0
+
+# untuk detail message log
+log:
+  level: DEBUG
+  format: json
+
+# untuk CORS
+cors:
+  allowedOrigins: ["*"]
+  allowedMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+  allowedHeaders: ["*"]
+  exposedHeaders: ["*"]
+  allowCredentials: true
+  # value=600 is the maximum value not ignored by any of major browsers
+  maxAge: 600
+
+# JWT auth
+jwtAuth:
+  jwtSecret: secret
+  jwtAlgorithm: HS256
+  jwtExpiredInSec: 36000000
+
+# untuk database MySQL
+dbMySQL:
+  host: 172.22.0.2
+  port: 3306
+  user: root
+  pass: your-db-passwd
+  dbName: your_db
+
+# untuk minio (storage)
+minio:
+  endpoint: 84.247.148.61:9000
+  accessKeyId: minioUser
+  secretAccessKey: cBh6VG5G2yEu7ZJbefU2
+  bucketName: indonesia-sekolah
+  useSSL: false

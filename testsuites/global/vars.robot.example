@@ -1,0 +1,4 @@
+*** Variables ***
+#************************ Common Variables ****************************
+${BROWSER}      Firefox
+${URL}          http://localhost:8084
